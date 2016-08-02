@@ -4,6 +4,7 @@
   "description": "React components for automatic typing effects.",
   "main": "./build/react-typewriter.js",
   "scripts": {
+    "pre-commit": "npm run build && git a build",
     "prepublish": "npm run build",
     "build": "./node_modules/.bin/webpack -p",
     "dev-build": "./node_modules/.bin/webpack -d --progress --colors",
@@ -11,6 +12,9 @@
     "dev-server": "./node_modules/.bin/webpack-dev-server --port 3000",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx ./src"
   },
+  "pre-commit": [
+      "pre-commit"
+  ],
   "keywords": [
     "animated",
     "typing",
